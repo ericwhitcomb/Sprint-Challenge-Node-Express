@@ -22,4 +22,19 @@ router.get('/:id', (req, res) => {
         });
 });
 
+router.post('/', (req, res) => {
+    const project = req.body;
+    if (project.name && project.description) {
+        projectDb.insert(project)
+            .then((project) => {
+                res.status(201).json(project);
+            })
+            .catch((err) => {
+                res.status(500).json({error: "Unable to create post."});
+            });
+    } else {
+        res.status(400).json({errorMessage: "Please provide 'name' and 'description' for the project."});
+    }
+});
+
 module.exports = router;
