@@ -51,4 +51,23 @@ router.delete('/:id', (req, res) => {
     })
 });
 
+router.put('/:id', (req, res) => {
+    const project = req.body;
+    if (project.name && project.description) {
+        projectDb.update(req.params.id, project)
+            .then(project => {
+                if (project) {
+                    res.json(project);
+                } else {
+                    res.status(404).json({message: "The project does not exist."});
+                }
+            })
+            .catch(err => {
+                res.status(500).json({error: "The project could not be modified."});
+            });
+    } else {
+        res.status(400).json({errorMessage: "Please provide 'name' and 'description' for the project."});
+    }
+});
+
 module.exports = router;
