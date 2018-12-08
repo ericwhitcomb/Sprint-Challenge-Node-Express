@@ -3,21 +3,21 @@
 ## Assignments
 
 - Please open the `Review.md` file and answer the questions.
-- Use Node.js and Express to design and build an API that performs CRUD operations on **projects** and **actions**.
+- [x] Use Node.js and Express to design and build an API that performs CRUD operations on **projects** and **actions**.
 
 ### Download Project Files and Install Dependencies
 
 - [x] **Fork** and **Clone** this repository.
 - [x] **CD into the folder** where you cloned the repository.
-- Code!
+- [x] Code!
 
 ### Implement Requirements
 
 - [x] Take the steps necessary to create a `package.json` to keep a record of all dependencies.
 - [x] use _yarn_ or _npm_ to add **knex** and **sqlite3** as dependencies to the project. **This is required for database access**.
 - [x] Configure an _npm script_ named _"start"_ that will execute your code using _nodemon_ so that the **server restarts on changes**. Make _nodemon_ be a development time dependency only, it shouldn't be deployed to production.
-- Design and build a set of endpoints that satisfy the API requirements.
-- **Use _Postman_ to test the API as you work through the exercises.**
+- [x] Design and build a set of endpoints that satisfy the API requirements.
+- [x] **Use _Postman_ to test the API as you work through the exercises.**
 
 ### Database Persistence Helpers
 
@@ -59,8 +59,8 @@ Now that we have a way to add, update, remove and retrieve data from the provide
 
 Design and build the necessary endpoints to:
 
-- perform CRUD operations on _projects_ and _actions_.
-- retrieve the list of actions for a project.
+- [x] perform CRUD operations on _projects_ and _actions_.
+- [x] retrieve the list of actions for a project.
 
 ## Stretch Goal
 
