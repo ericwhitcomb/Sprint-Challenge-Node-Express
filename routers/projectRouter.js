@@ -70,4 +70,14 @@ router.put('/:id', (req, res) => {
     }
 });
 
+router.get('/:id/actions', (req, res) => {
+    projectDb.get(req.params.id)
+        .then((project) => {
+            res.json(project);
+        })
+        .catch((err) => {
+            res.status(500).json({error: "Project actions could not be retrieved."});
+        });
+});
+
 module.exports = router;
